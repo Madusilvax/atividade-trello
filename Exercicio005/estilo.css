@@ -1,0 +1,39 @@
+/*CSS - Cascading Style Sheet*/
+
+/*selector
+tag --> body
+id --> #foto
+classe --> .nomedaclasse
+*/
+body{
+    /*propriedade : valor*/
+    color:#000000 ;
+    background-color: #d4b2ec;
+}
+
+#foto{
+    height: 150px;
+   border-radius: 10px;
+   border:8px double white;
+   
+
+}
+
+/*
+cores originais: 
+texto: #000000
+fundo: #d4b2ec
+
+cor dia 
+texto: #000000
+fundo: #b4edff
+
+cor tarde
+texto:#000000
+fundo:#3a82d4
+
+cor noite
+texto: #ffffff
+fundo: #090de7
+
+*/
