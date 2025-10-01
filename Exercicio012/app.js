@@ -1,4 +1,4 @@
-let contador = 0
+let contador = 0, controle = 0
 
 function fnStart() {
     document.getElementById("contador").innerHTML = contador
@@ -7,11 +7,15 @@ function fnStart() {
     } else if (controle == 10) {
         contador--
     }
-}
-if(contador==10){
-    controle = 10
-}else if(contador == 0){
-    controle = 0
+
+
+    if (contador == 10) {
+        controle = 10
+    } else if (contador == 0) {
+        controle = 0
+    }
+
+
 }
 
 function fnLigar() {
