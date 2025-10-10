@@ -75,7 +75,7 @@ const pokemons = [
   "Dratini", "Dragonair", "Dragonite",
   "Mewtwo"
 ];
- 
+
 const pokemonImages = [
   "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
   "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/002.png",
@@ -229,19 +229,32 @@ const pokemonImages = [
   "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/150.png"
 ];
 
-function fnListarPokemon(){
-    let i = fnRolarDados()
-    document.getElementById("numero").innerHTML =`#${i+1}`
-    document.getElementById("nome").innerHTML = pokemons[i]
-    document.getElementById("foto").src = pokemonImages[i]
+function fnListarPokemon() {
+  let i = fnRolarDados()
+  document.getElementById("numero").innerHTML = `#${i + 1}`
+  document.getElementById("nome").innerHTML = pokemons[i]
+  document.getElementById("foto").src = pokemonImages[i]
 }
 
-function fnRolarDados(){
-    let min = 0
-    let max = 149
-    let numeroSorteado = Math.floor(Math.random() * (max-min + 1)) + min
-   
-    return numeroSorteado
+function fnRolarDados() {
+  let min = 0
+  let max = 149
+  let numeroSorteado = Math.floor(Math.random() * (max - min + 1)) + min
+
+  return numeroSorteado
+}
+
+function fnEsconder() {
+  document.getElementById("numero").classList.add("esconder-numero")
+  document.getElementById("nome").classList.add("esconder-nome")
+  document.getElementById("foto").classList.add("esconder-pokemon")
+}
+
+function fnRevelar() {
+  document.getElementById("numero").classList.remove("esconder-numero")
+  document.getElementById("nome").classList.remove("esconder-nome")
+  document.getElementById("foto").classList.remove("esconder-pokemon")
 }
 
 fnListarPokemon()
+fnEsconder()
