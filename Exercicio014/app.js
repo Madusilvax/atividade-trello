@@ -1,58 +1,58 @@
-const timesBrasileirao = [
-  "Atlético Mineiro",
-  "Athletico Paranaense",
-  "Bahia",
-  "Botafogo",
-  "Bragantino",
-  "Corinthians",
-  "Cruzeiro",
-  "Cuiabá",
-  "Flamengo",
-  "Fluminense",
-  "Fortaleza",
-  "Grêmio",
-  "Internacional",
-  "Juventude",
-  "Palmeiras",
-  "Santos",
-  "São Paulo",
-  "Vasco da Gama",
-  "Vitória",
-  "Chapecoense"
+const times = [
+    "Flamengo",
+    "Palmeiras",
+    "São Paulo",
+    "Santos",
+    "Corinthians",
+    "Grêmio",
+    "Internacional",
+    "Atlético-MG",
+    "Cruzeiro",
+    "Botafogo",
+    "Fluminense",
+    "Athletico-PR",
+    "Ceará",
+    "Bahia",
+    "Fortaleza",
+    "Coritiba",
+    "Atlético-GO",
+    "América-MG",
+    "Juventude",
+    "Vasco da Gama"
 ];
-const cidadetimes = [
-  { time: "Atlético Mineiro", cidade: "Belo Horizonte - MG" },
-  { time: "Athletico Paranaense", cidade: "Curitiba - PR" },
-  { time: "Bahia", cidade: "Salvador - BA" },
-  { time: "Botafogo", cidade: "Rio de Janeiro - RJ" },
-  { time: "Bragantino", cidade: "Bragança Paulista - SP" },
-  { time: "Corinthians", cidade: "São Paulo - SP" },
-  { time: "Cruzeiro", cidade: "Belo Horizonte - MG" },
-  { time: "Cuiabá", cidade: "Cuiabá - MT" },
-  { time: "Flamengo", cidade: "Rio de Janeiro - RJ" },
-  { time: "Fluminense", cidade: "Rio de Janeiro - RJ" },
-  { time: "Fortaleza", cidade: "Fortaleza - CE" },
-  { time: "Grêmio", cidade: "Porto Alegre - RS" },
-  { time: "Internacional", cidade: "Porto Alegre - RS" },
-  { time: "Juventude", cidade: "Caxias do Sul - RS" },
-  { time: "Palmeiras", cidade: "São Paulo - SP" },
-  { time: "Santos", cidade: "Santos - SP" },
-  { time: "São Paulo", cidade: "São Paulo - SP" },
-  { time: "Vasco da Gama", cidade: "Rio de Janeiro - RJ" },
-  { time: "Vitória", cidade: "Salvador - BA" },
-  { time: "Chapecoense", cidade: "Chapecó - SC" },
+ 
+const cidadesTimes = [
+    "Rio de Janeiro - Flamengo",
+    "São Paulo - Palmeiras",
+    "São Paulo - São Paulo",
+    "Santos - Santos",
+    "São Paulo - Corinthians",
+    "Porto Alegre - Grêmio",
+    "Porto Alegre - Internacional",
+    "Belo Horizonte - Atlético-MG",
+    "Belo Horizonte - Cruzeiro",
+    "Rio de Janeiro - Botafogo",
+    "Rio de Janeiro - Fluminense",
+    "Curitiba - Athletico-PR",
+    "Fortaleza - Ceará",
+    "Salvador - Bahia",
+    "Fortaleza - Fortaleza",
+    "Curitiba - Coritiba",
+    "Goiânia - Atlético-GO",
+    "Belo Horizonte - América-MG",
+    "Caxias do Sul - Juventude",
+    "Rio de Janeiro - Vasco da Gama"
 ];
-
-console.log("Times e cidades do Brasileirão 2025:")
-timesBrasileirao.forEach(t => console.log(`${t.time} — ${t.cidade}`))
-
-
-function fnListaTimes(){
-    document.getElementById("lista_times").innerHTML = `
-    <div class="col-6 border text-center">
-        ${times[0]} - ${cidadesTimes[0]}
-    </div>
-    `
+ 
+ 
+function fnListaTimes() {
+    for (let i = 0; i < times.length; i++) {
+        document.getElementById("lista_times").innerHTML += `
+        <div class="col-6 border text-center">
+            ${times[i]} - ${cidadesTimes[i]}
+        </div>
+        `
+    }
 }
  
 fnListaTimes()
